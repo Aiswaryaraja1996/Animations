@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <style>
+      body {
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        background-color: black;
+      }
+      .planet {
+        width: var(--diameter);
+        height: var(--diameter);
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - var(--diameter) / 2);
+        left: calc(50% - var(--diameter) / 2);
+      }
+
+      .ring {
+        width: var(--diameter);
+        height: var(--diameter);
+        background-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - var(--diameter) / 2);
+        left: calc(50% - var(--diameter) / 2);
+        border: 1px solid white;
+      }
+
+      .sun {
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          ellipse at center,
+          #ffd000 1%,
+          #f9b700 39%,
+          #f9b700 39%,
+          #e06317 100%
+        );
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 200px / 2);
+        left: calc(50% - 200px / 2);
+      }
+      .mercury {
+        --diameter: 20px;
+        --moveX: 150px;
+        background-color: #9f5e26;
+        animation: solarsystem 4s infinite linear;
+      }
+      .venus {
+        --diameter: 50px;
+        --moveX: 200px;
+        background-color: #beb768;
+        animation: solarsystem 3s infinite linear;
+      }
+      .earth {
+        --diameter: 80px;
+        --moveX: 260px;
+        background-color: #11abe9;
+        animation: solarsystem 4.5s infinite linear;
+      }
+      .mars {
+        --diameter: 60px;
+        --moveX: 330px;
+        background-color: #cf3921;
+        animation: solarsystem 5s infinite linear;
+      }
+      .circle-1 {
+        --diameter: 295px;
+      }
+      .circle-2 {
+        --diameter: 395px;
+      }
+      .circle-3 {
+        --diameter: 515px;
+      }
+      .circle-4 {
+        --diameter: 660px;
+      }
+      @keyframes solarsystem {
+        from {
+          transform: rotate(0deg) translate(var(--moveX));
+        }
+        to {
+          transform: rotate(360deg) translate(var(--moveX));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1
+        style="
+          text-align: center;
+          color: white;
+          font-size: 42px;
+          letter-spacing: 5px;
+        "
+      >
+        SOLAR SYSTEM
+      </h1>
+      <div class="sun"></div>
+      <div class="circle-1 ring"></div>
+      <div class="planet mercury"></div>
+
+      <div class="circle-2 ring"></div>
+      <div class="planet venus"></div>
+
+      <div class="circle-3 ring"></div>
+      <div class="planet earth"></div>
+
+      <div class="circle-4 ring"></div>
+      <div class="planet mars"></div>
+    </div>
+  </body>
+</html>
