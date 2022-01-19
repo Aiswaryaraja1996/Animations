@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      #spinner {
+        animation: spinner linear infinite 2s;
+      }
+      @keyframes spinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .line {
+        width: 160px;
+        height: 10px;
+        border-radius: 7px;
+        background-color: red;
+      }
+
+      #icon:hover .line:nth-child(1) {
+        transform: rotate(45deg) translate(30px, 30px);
+      }
+
+      #icon:hover .line:nth-child(2) {
+        opacity: 0;
+      }
+
+      #icon:hover .line:nth-child(3) {
+        transform: rotate(-45deg)  translate(20px, -26px); 
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      "
+    >
+      <h1>SPINNER</h1>
+      <div id="spinner" style="font-size: 5rem">⭮</div>
+      <h1>HAMBURGER-ICON</h1>
+      <div
+        id="icon"
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 1.75rem;
+          cursor: pointer;
+        "
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </body>
+</html>
