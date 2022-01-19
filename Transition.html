@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      #square-1 {
+        transition: transform 0.5s;
+      }
+      #square-1:hover {
+        transform: scale(1.2);
+      }
+      #square-2 {
+        animation: onLoad 2s ease-in-out infinite;
+      }
+      @keyframes onLoad {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #square-3 {
+        animation: moveToLeft 2s ease-in-out infinite;
+        animation-delay: 1000ms;
+      }
+
+      @keyframes moveToLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(300px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+      #square-4 {
+        transform: rotate(0deg);
+        transition: transform 1s;
+      }
+      #square-4:hover {
+        transform: rotate(360deg);
+      }
+      #square-5 {
+        border-radius: 0;
+        transition: border-radius 1s;
+      }
+      #square-5:hover {
+        border-radius: 50%;
+      }
+      #square-6 {
+        animation: moveToRight 2s ease infinite;
+      }
+      @keyframes moveToRight {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(300px);
+        }
+      }
+      #square-7{
+          animation: moveToRight 2s ease-in infinite;
+      }
+      #square-8{
+          animation: moveToRight 2s ease-out infinite;
+      }
+      #square-9{
+          animation: moveToRight 2s ease-in-out infinite;
+      }
+      #square-10{
+          animation: moveToRight 2s linear infinite;
+      }
+      #square-11{
+          animation: moveToRight 2s cubic-bezier(.3,.7,.3,.7) infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center; gap:1rem">
+      <h1>ON-HOVER</h1>
+      <div
+        id="square-1"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <h1>ON-LOAD</h1>
+      <div
+        id="square-2"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <h1>SLIDE-IN</h1>
+      <div
+        id="square-3"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <h1>ROTATE</h1>
+      <div
+        id="square-4"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <h1>BORDER-RADIUS</h1>
+      <div
+        id="square-5"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <h1>TIMING FUNCTIONS</h1>
+      <div
+        id="square-6"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <div
+        id="square-7"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <div
+        id="square-8"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <div
+        id="square-9"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <div
+        id="square-10"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+      <div
+        id="square-11"
+        style="background-color: red; width: 100px; height: 100px"
+      ></div>
+    </div>
+  </body>
+</html>
