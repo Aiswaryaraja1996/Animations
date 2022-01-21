@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      .car {
+        animation: moveToRight 2s ease infinite;
+      }
+      @keyframes moveToRight {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(300px);
+        }
+      }
+      .wheel {
+     
+        animation: spin linear 1s infinite;
+      }
+      @keyframes spin {
+        from {
+          transform-origin: rotate(0deg);
+        }
+        to {
+          transform-origin: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="car" width="600" height="600" viewBox="0 0 600 600">
+      <circle class="wheel" cx="100" cy="180" r="40" fill="black" />
+      <circle class="wheel" cx="300" cy="180" r="40" fill="black" />
+      <rect x="0" y="0" width="400" height="150" fill="pink" rx="100" />
+    </svg>
+  </body>
+</html>
